@@ -147,8 +147,8 @@ app.post('/project', async (req, res) => {
       //try to save img to codinary and fetec url
       
       const { image, Name, Description } = req.body
-      const url = image
-      const project = new Project({ url , Name, Description })
+      // const url = image
+      const project = new Project({ image , Name, Description })
       const savedproject = await project.save()
       res.status(201).json(savedproject)
       console.log(savedproject);
