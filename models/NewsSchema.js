@@ -1,12 +1,14 @@
-import mongoose from 'mongoose';
-
+import mongoose from "mongoose";
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
-const NewsSchema = new Schema({
-  author: ObjectId,
-  Email: String,
-}, { collection: 'NewsLatters' });
+const NewsSchema = new Schema(
+  {
+    author: ObjectId,
+    Email: String,
+  },
+  { collection: "NewsLatters" }
+);
 
-export const News = mongoose.model('News', NewsSchema)
+export const News = mongoose.model("News", NewsSchema);
